@@ -1,0 +1,279 @@
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+    color: #505962;
+    padding: 0;
+    margin: 0;
+}
+
+.narrow{
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.btn-md{
+    border-width: medium;
+    border-radius: 0;
+    padding: .6rem 1.1rem;
+    text-transform: uppercase;
+    margin: 1rem;
+}
+
+.offset:before{
+    height: 3.8rem;
+    margin-top: -3.8rem;
+    content: "";
+    display: block;
+}
+
+/*--- Navbar ---*/
+.navbar{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    overflow: hidden;
+}
+
+.navbar-nav li{
+    padding-right: .7rem;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: white;
+    padding-top: .8rem;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover{
+    color: #5ce1e6;
+}
+
+/*--- Slider ---*/
+.carousel-item{
+    height: 95vh;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.carousel-caption{
+    position: absolute;
+    top: 33%;
+    text-transform: uppercase;
+    width: 100%;
+    right: 0;
+    left: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.carousel-caption h2{
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    text-shadow: .1rem .1rem .8rem black;
+    padding-bottom: 1rem;
+}
+
+.carousel-caption h1{
+    font-size: 2rem;
+    text-shadow: .1rem .1rem .5rem black;
+}
+
+/*---Change Carousel Transition Speed --*/
+.carousel-item-next, .carousel-item-prev, .carousel-item.active {
+    display: block;
+    transition: -webkit-transform 1.2s ease;
+    transition: transform 1.2s ease;
+    transition: transform 1.2s ease,-webkit-transform 1.2s ease;
+}
+
+/*--- Text & Line ---*/
+h3.heading{
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 0.5rem;
+    padding-top: 1.0rem;
+}
+
+.heading-underline{
+    width: 3rem;
+    height: .2rem;
+    background-color: #5ce1e6;
+    margin: 0 auto 2rem;
+}
+
+#video h3.heading{
+    margin-top: 2.5rem;
+}
+
+/*--- Portfolio ---*/
+.jumbotron{
+    border-radius: 0;
+    padding: 3rem 0 2rem;
+    margin: 0;
+}
+
+.portfolio img{
+    max-width: 100%;
+    transition: transform .5s ease;
+}
+
+.portfolio img:hover{
+    transform: scale(1.1);
+}
+
+.portfolio {
+    overflow: hidden;
+}
+
+
+
+/*--- Video ---*/
+#video{
+    background-image: url(images/backgroundvideo.jpg);
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: 100% 110%;
+    padding-bottom: 2.5rem;
+    overflow: hidden;
+
+}
+
+/*--- Contact ---*/
+#contact a{
+    color: #505962;
+}
+
+#contact svg.svg-inline--fa{
+    font-size: 1.7rem;
+    margin: 1.2rem 1.5rem 0 0;
+}
+
+#contact svg.svg-inline--fa:hover{
+    color: #5ce1e6;
+}
+
+
+/*--- Footer ---*/
+footer{
+    background-color: #40474e;
+    color: white;
+    padding: 2rem 0 3rem;
+}
+
+/*--- Media Queries ---*/
+@media (max-width: 767px){
+
+    .carousel-caption h2{
+        font-size: 2.3rem;
+        letter-spacing: .15rem;
+        padding-bottom: .5rem;
+    }
+
+    .carousel-caption h1{
+        font-size: 1.2rem;
+        padding-bottom: 1.2rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------*/
+/*------Portfolio CSS--------*/
+/*---------------------------*/
+
+/*--- Portfolio Menu ---*/
+#gallery-menu{
+    padding-top: 5rem;
+}
+
+#gallery-menu .jumbotron{
+    background-color: transparent !important;
+}
+
+/*--- Portfolio Menu ---*/
+
+.portfolio-menu{
+	text-align:center;
+}
+.portfolio-menu ul li{
+	display:inline-block;
+	margin:0;
+	list-style:none;
+	padding:10px 15px;
+	cursor:pointer;
+	-webkit-transition:all 05s ease;
+	-moz-transition:all 05s ease;
+	-ms-transition:all 05s ease;
+	-o-transition:all 05s ease;
+	transition:all .5s ease;
+}
+
+/*--- Portfolio/Gallery ---*/
+
+#gallery .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  #gallery .column {
+    flex: 25%;
+    max-width: 33.3%;
+    padding: 0 4px;
+  }
+  
+  #gallery .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    filter: grayscale(1) brightness(0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+  #gallery .column img:hover {
+    filter: grayscale(0);
+  }
+  @media screen and (max-width: 800px) {
+    #gallery .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    #gallery .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+    #gallery .column img {
+      filter: grayscale(0) brightness(1);
+    }
+  }
+  
